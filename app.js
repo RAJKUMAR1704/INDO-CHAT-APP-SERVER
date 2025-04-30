@@ -53,7 +53,7 @@ const io = new Server(server, {
 
 app.set("io", io);
 
-// Using Middlewares Here
+// Using Middlewares 
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors(corsOptions));
@@ -63,7 +63,7 @@ app.use("/api/v1/chat", chatRoute);
 app.use("/api/v1/admin", adminRoute);
 
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  res.send("Hello backend server");
 });
 
 io.use((socket, next) => {
